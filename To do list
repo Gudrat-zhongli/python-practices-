@@ -1,1 +1,39 @@
+tasks = []
+print("welcome my dear, here is your to do list app")
+print("choose your action:")
+print("1. viewtasks")
+print("2. add a task")
+print("3. delete a task")
+print("4. exit")
+while True:
+    
+    
+    choice = input("1,2,3,4: ")
+    if choice == "1":
+        if not tasks:
+            print("you have no tasks")
+        else:
+            print("here are your tasks")
+            for i,tassk in enumerate(tasks,start=1):
+                print(i, tassk)
 
+    elif choice == "2":
+        tassk = input("what is your task? ")                
+        tasks.append(tassk)
+        print("added")
+    elif choice == "3":
+        if not tasks:
+            print("you have no tasks")  
+        else:      
+            print("your tasks:")
+            for i, tassk in enumerate(tasks,start=1):
+                print(i, tassk)
+                tassk_num = int(input("whch task do you want to delete? "))
+                if 1 <= tassk_num <= len(tasks):
+                    del tasks[tassk_num - 1]
+                    print("task deleted")
+    elif choice == "4":
+        print("bye")
+        break
+    else:
+        print("wtf, choose a number between 1 and 4")
