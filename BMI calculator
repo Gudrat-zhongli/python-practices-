@@ -1,1 +1,15 @@
-
+print ("Enter your height in cm:")
+height = int(input())
+print ("Enter your weight in kg:")
+weight = int(input())
+BMI = weight / ((height * height) /10000)
+print ("your BMI is: ", BMI," my dear")
+if BMI < 18.5:
+        print (" underweight, I guess")
+elif 18.5 <= BMI <= 24.9:
+        print (" you got a normal weight, I guess")
+elif  BMI > 24.9:
+        print (" overweight/obese, I guess")
+else:
+        print (" invalid input")
+    
